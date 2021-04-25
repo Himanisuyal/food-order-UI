@@ -1,0 +1,153 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #fafafa;
+}
+
+.grid-container {
+  display: grid;
+  padding: 20px 20px 0px 20px;
+  grid-template-columns: 1fr 3fr 1.2fr;
+  grid-template-rows: minmax(200px, auto);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-areas:
+    "sidebar heading description"
+    "sidebar menu menu";
+}
+
+.navBar {
+  grid-area: sidebar;
+  font-family: sans-serif;
+  padding-left: 30px;
+}
+.navBar h1 {
+    font-family: 'Abril Fatface', cursive;
+}
+
+.navBar li {
+  font-size: 30px;
+  list-style-type: none;
+  line-height: 2.2em;
+  color: #9a9a9a;
+}
+
+.navBar ul {
+  padding: 0px;
+}
+
+.cart {
+  width: 60%;
+  background-color: rgb(255, 78, 78);
+  border-radius: 40px;
+}
+.cart p {
+  font-family: sans-serif;
+  font-size: 24px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.text-decoration {
+  text-decoration: line-through;
+  text-decoration-color: rgb(255, 78, 78);
+}
+.heading {
+    font-family: 'Abril Fatface', cursive;
+  grid-area: heading;
+  font-size: 40px;
+}
+
+.menu {
+  grid-area: menu;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 45px;
+  color: #000000;
+}
+.menu-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  background-color: white;
+  flex-grow: 1;
+  height: 235px;
+  margin: 9px;
+  border-radius: 20px;
+  box-shadow: rgb(220 220 220) 5px 23px 19px;
+}
+.circular-img {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 25px 0px;
+}
+.item-name {
+  font-family: sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 0px;
+}
+.hidelarge {
+    display: none;
+}
+.description {
+  font-family: sans-serif;
+  grid-area: description;
+  color: #9a9a9a;
+  padding-top: 78px;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+hr {
+  width: 25%;
+  margin-left: 0px;
+  border: 1px solid rgb(255, 78, 78);
+}
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(50px, auto);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        grid-template-areas:
+          "navbar"
+          "heading"
+          "menu"
+          "description";
+    }
+
+    .hideSmall {
+        display: none;
+    }
+    .topBar {
+        grid-area: navbar;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+    
+    .logo {
+        font-size: 34px;
+        font-weight: 700;
+        font-family: "Times New Roman", Times, serif;
+    }
+    
+    i{
+        font-size: 32px;
+        color: rgb(255, 78, 78);
+    }
+
+    .description {
+      padding-top: 20px;
+    }
+}
